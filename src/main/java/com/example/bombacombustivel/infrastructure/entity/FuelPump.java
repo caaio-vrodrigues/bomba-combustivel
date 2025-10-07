@@ -13,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "fuel_pump")
+@Table(name="fuel_pump")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -21,10 +21,10 @@ import lombok.NoArgsConstructor;
 public class FuelPump {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
 	@ManyToOne
-	@JoinColumn(name = "type_fuel")
+	@JoinColumn(name="type_fuel", nullable=false)
 	private TypeOfFuel fuel;
 }

@@ -14,7 +14,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "fuel_type")
+@Table(name="fuel_type")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -22,12 +22,12 @@ import lombok.NoArgsConstructor;
 public class TypeOfFuel {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name = "name")
+	@Column(name="name", nullable=false, unique=true)
 	private String name;
 	
-	@Column(name = "liter_price")
+	@Column(name="liter_price", nullable=false)
 	private BigDecimal literPrice;
 }

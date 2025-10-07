@@ -15,7 +15,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "fuel_supply")
+@Table(name="fuel_supply")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -23,24 +23,24 @@ import lombok.NoArgsConstructor;
 public class FuelSupply {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name = "time_stamp")
+	@Column(name="time_stamp", nullable=false)
 	private LocalDateTime timeStamp;
 	
-	@Column(name = "pump_id")
+	@Column(name="pump_id", nullable=false)
 	private Integer pump;
 	
-	@Column(name = "fuel")
+	@Column(name="fuel", nullable=false)
 	private String typeOfFuel;
 	
-	@Column(name = "total_liters")
+	@Column(name="total_liters", nullable=false)
 	private BigDecimal totalLiters;
 	
-	@Column(name = "liter_price")
+	@Column(name="liter_price", nullable=false)
 	private BigDecimal literPrice;
 	
-	@Column(name = "total_payment")
+	@Column(name="total_payment", nullable=false)
 	private BigDecimal totalPayment;
 }
